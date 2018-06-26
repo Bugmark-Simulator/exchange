@@ -49,7 +49,7 @@ Let's get started:
 1. Install VirtualBox and Vagrant on your host machine (Linux, Win, Mac OK)
 
 2. Download the dev-machine Vagrantfile 
-   `wget raw.githubusercontent.com/bugmark/exchange/master/Vagrantfile`
+   `wget raw.githubusercontent.com/Bugmark-Simulator/exchange/master/Vagrantfile`
 
 3. Run `vagrant up` to create a virtual machine.
 
@@ -58,7 +58,7 @@ Let's get started:
 ## Cloning the Bugmark Exchange
 
 1. Clone the tracker 
-   `mkdir src; cd src; git clone https://github.com/bugmark/exchange.git`
+   `mkdir src; cd src; git clone https://github.com/Bugmark-Simulator/exchange.git`
 
 2. CD to the tracker directory `cd exchange`
 
