@@ -20,7 +20,7 @@ To be successful, you'll need good skills with the following tools:
 ## Host Machine
 
 We assume that you're using Ubuntu 16.04 as your host machine.  If you're Mac
-savvy, you'll be able to get things running on a Mac. 
+savvy, you'll be able to get things running on a Mac.
 
 Your host machine can exist in a few different forms:
 1) a destop Ubuntu system
@@ -48,7 +48,7 @@ Let's get started:
 
 1. Install VirtualBox and Vagrant on your host machine (Linux, Win, Mac OK)
 
-2. Download the dev-machine Vagrantfile 
+2. Download the dev-machine Vagrantfile
    `wget raw.githubusercontent.com/bugmark/exchange/master/Vagrantfile`
 
 3. Run `vagrant up` to create a virtual machine.
@@ -57,7 +57,7 @@ Let's get started:
 
 ## Cloning the Bugmark Exchange
 
-1. Clone the tracker 
+1. Clone the tracker
    `mkdir src; cd src; git clone https://github.com/bugmark/exchange.git`
 
 2. CD to the tracker directory `cd exchange`
@@ -68,11 +68,11 @@ On the host machine:
 
 1. Checkout the dev branch `git checkout -b dev origin/dev`
 
-2. Install ansible `script/dev/provision/install_ansible`
+2. Install ansible `./script/dev/provision/install_ansible`
 
-3. Install ansible roles `script/dev/provision/install_roles`
+3. Install ansible roles `./script/dev/provision/install_roles`
 
-4. Provision the dev machine `script/dev/provision/localhost`
+4. Provision the dev machine `./script/dev/provision/localhost`
 
 5. Check database status: `systemctl status postgresql`
 
@@ -90,7 +90,7 @@ Follow these steps to bootstrap the app in your development environment.
 
 4. Run migrations `bundle exec rails db:migrate`
 
-5. Start the tmux development session `script/dev/session`
+5. Start the tmux development session `./script/dev/session`
 
    A cheat-sheet for tmux navigation is in `~/.tmux.conf`.
 
@@ -107,11 +107,11 @@ Follow these steps to bootstrap the app in your development environment.
 ### SSH-Chat
 
 Connect to the SSH-Chat server from the command line.
-`script/util/sshchat`
+`./script/util/sshchat`
 
 ### File Transfer
 
-Sender: 
+Sender:
 - type `wormhole send <filename>`
 - note the wormhole code
 
@@ -123,8 +123,8 @@ Receiver:
 ### Terminal Sharing
 
 Session host:
-- start a tmate session `script/tmate/start`
-- publish the session address `script/tmate/address`
+- start a tmate session `./script/tmate/start`
+- publish the session address `./script/tmate/address`
   the session address is published onto SSH-Chat
 
 Session participant:

@@ -2,10 +2,10 @@
 # sets up a development environment on the target host
 #
 - vars:
-    - rem_host:     all           
+    - rem_host:     all
     - rem_user:     "{{lookup('env', 'USER') }}"
     - lcl_user:     "{{ lookup('env', 'USER') }}"
-    - lcl_root:     "/home/{{lcl_user}}/src/bugmark"
+    - lcl_root:     "/home/{{lcl_user}}/src/exchange"
     - pg_user:      "bugmark"
     - pg_pass:      "pgpass"
   remote_user: "{{rem_user}}"
@@ -25,5 +25,5 @@
     - pip
     - tmux
     - nodejs
-    - yarn 
+    - yarn
     - postgres
