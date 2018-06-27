@@ -16,6 +16,6 @@ if [[ -d x-ansible ]] ; then
 else
   echo "Cloning roles"
   sudo rm -rf x-ansible
-  git clone https://github.com/andyl/x-ansible.git
+  git clone https://github.com/Bugmark-Simulator/x-ansible.git
 fi
 echo "DONE."
