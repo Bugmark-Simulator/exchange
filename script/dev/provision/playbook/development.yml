@@ -27,3 +27,5 @@
     - nodejs
     - yarn
     - postgres
+    - influxdb
+    - grafana
