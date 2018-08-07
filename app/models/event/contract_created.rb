@@ -7,11 +7,6 @@ class Event::ContractCreated < Event
   validates :uuid       , presence: true
   validates :maturation , presence: true
 
-  # def user_uuids
-  #   binding.pry
-  #   []
-  # end
-
   def cast_object
     Contract.new(payload.without_blanks)
   end
@@ -31,6 +26,8 @@ end
 #  payload      :jsonb            not null
 #  jfields      :jsonb            not null
 #  user_uuids   :string           default([]), is an Array
+#  tags         :string
+#  note         :string
 #  projected_at :datetime
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null

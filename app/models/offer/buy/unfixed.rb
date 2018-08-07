@@ -51,7 +51,6 @@ end
 #
 #  id                    :bigint(8)        not null, primary key
 #  uuid                  :string
-#  exid                  :string
 #  type                  :string
 #  tracker_type          :string
 #  user_uuid             :string
@@ -76,6 +75,8 @@ end
 #  stm_body              :string
 #  stm_status            :string
 #  stm_labels            :string
+#  stm_trader_uuid       :string
+#  stm_group_uuid        :string
 #  stm_comments          :jsonb            not null
 #  stm_jfields           :jsonb            not null
 #  stm_xfields           :hstore           not null
