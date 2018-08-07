@@ -64,6 +64,13 @@ gem 'factory_bot_rails'          # for data loading in production
 gem 'pry-rails'     # upgraded repl
 gem 'hirb'          # display objects as tables
 
+# ------ Gem Files for Graphs -----
+
+gem 'chartkick'
+gem 'groupdate'
+gem 'bootstrap-sass'
+
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
@@ -71,7 +78,7 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'launchy'
-  gem 'rails-erd'    
+  gem 'rails-erd'
 end
 
 group :development do
@@ -92,4 +99,3 @@ group :development do
   gem 'listen'               , '>= 3.0.5', '< 3.2'
   gem 'annotate', require: false   #'be annotate -d; be annotate -p after'
 end
-

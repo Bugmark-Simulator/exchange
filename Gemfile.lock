@@ -102,6 +102,9 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bootstrap_form (2.7.0)
     builder (3.2.3)
     byebug (10.0.2)
@@ -123,6 +126,7 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.0)
+    chartkick (2.3.5)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.2.0)
@@ -194,6 +198,8 @@ GEM
       rack
     graphviz (1.0.0)
       process-pipeline
+    groupdate (4.0.1)
+      activesupport (>= 4.2)
     guard (2.14.2)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -450,10 +456,12 @@ DEPENDENCIES
   awesome_print
   bcrypt (~> 3.1.7)
   bootstrap
+  bootstrap-sass
   bootstrap_form
   byebug
   capistrano-rails
   capybara
+  chartkick
   coffee-rails (~> 4.2)
   colored
   devise
@@ -468,6 +476,7 @@ DEPENDENCIES
   grape-swagger-rails
   grape_logging
   graphviz
+  groupdate
   guard
   guard-rspec_min!
   hirb
@@ -515,4 +524,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

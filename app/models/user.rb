@@ -26,6 +26,7 @@ class User < ApplicationRecord
     with: /\A[a-zA-Z0-9.-]+\z/,
     message: "Username can have only alphanumeric(A-Z, a-z, 0-9), period(.) and dash(-) characters."
 
+  #validates :mobile    , :presence => true
   validates :email    , :presence => true
   validates :password , :presence => true, :on => :create, unless: :has_encrypted_pwd?
   validates :balance  , :numericality => { greater_than_or_equal_to: 0.0 }
