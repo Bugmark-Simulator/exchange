@@ -46,7 +46,6 @@ gem 'bootstrap'                   # twitter bootstrap
 
 gem 'will_paginate'               # pagination
 gem 'pg_search'                   # full-text search
-gem 'chartkick'                   # charts
 
 gem 'iora', github: 'bugmark/iora'
 
