@@ -31,11 +31,11 @@ class BugmHost
     end
 
     def reset_grafana
-
+      # do not reset grafana settings!
     end
 
     def reset_influx
-      return
+      # delete Influx database and recreate it -- tables are created within this
       return unless InfluxUtil.has_influx?
       InfluxStats.delete_database("bugm_stats")
       InfluxStats.create_database("bugm_stats")
