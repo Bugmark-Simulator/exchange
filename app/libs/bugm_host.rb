@@ -39,6 +39,8 @@ class BugmHost
       return unless InfluxUtil.has_influx?
       InfluxStats.delete_database("bugm_stats")
       InfluxStats.create_database("bugm_stats")
+      InfluxStats.delete_database("bugm_log")
+      InfluxStats.create_database("bugm_log")
     end
   end
 end
