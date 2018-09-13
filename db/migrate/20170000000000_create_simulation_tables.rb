@@ -11,10 +11,6 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.datetime :completed
       t.datetime :startwork
       t.boolean  :updated_issue, default: false
-      t.datetime :created_at, default: -> {'CURRENT_TIMESTAMP'}
-      t.datetime :updated_at, default: -> {'CURRENT_TIMESTAMP'}
-
-      t.timestamps
     end
     add_index :work_queues, :user_uuid
     add_index :work_queues, :issue_uuid
@@ -27,9 +23,6 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.string   :comment
       t.datetime :comment_date
       t.datetime :comment_delete
-      t.timestamps
-      t.datetime :created_at, default: -> {'CURRENT_TIMESTAMP'}
-      t.datetime :updated_at, default: -> {'CURRENT_TIMESTAMP'}
     end
     add_index :issue_comments, :issue_uuid
 
