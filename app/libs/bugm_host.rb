@@ -36,7 +36,7 @@ class BugmHost
 
     def reset_influx
       # delete Influx database and recreate it -- tables are created within this
-      return
+      # return
       return unless InfluxUtil.has_influx?
       InfluxStats.delete_database("bugm_stats")
       InfluxStats.create_database("bugm_stats")
