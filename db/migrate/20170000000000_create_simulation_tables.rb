@@ -26,5 +26,12 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
     end
     add_index :issue_comments, :issue_uuid
 
+    create_table  :log do |t|
+      t.string    :user_uuid
+      t.datetime  :time
+      t.string    :page
+      t.string    :issue_uuid  
+    end
+
   end
 end
