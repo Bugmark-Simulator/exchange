@@ -11,6 +11,7 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.datetime :completed
       t.datetime :startwork
       t.boolean  :updated_issue, default: false
+      t.jsonb    :jfields,  null: false, default: {}
     end
     add_index :work_queues, :user_uuid
     add_index :work_queues, :issue_uuid
@@ -23,6 +24,7 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.string   :comment
       t.datetime :comment_date
       t.datetime :comment_delete
+      t.jsonb    :jfields,  null: false, default: {}
     end
     add_index :issue_comments, :issue_uuid
 
@@ -30,7 +32,14 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.string    :user_uuid
       t.datetime  :time
       t.string    :page
-      t.string    :issue_uuid  
+      t.string    :issue_uuid
+      t.jsonb     :jfields,  null: false, default: {}
+    end
+
+    create_table  :bugmtimes do |t|
+      t.datetime  :bugmtime
+      t.datetime  :systime
+      t.jsonb     :jfields,  null: false, default: {}
     end
 
   end
