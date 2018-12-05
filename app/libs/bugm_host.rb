@@ -19,7 +19,7 @@ class BugmHost
     private
 
     def reset_postgres
-      tables = %w(Tracker User Offer Escrow Position Amendment Contract Event Work_queue Issue_Comment)
+      tables = %w(Tracker User Offer Escrow Position Amendment Contract Event Work_queue Issue_Comment Bugmtime)
       tables.each {|el|
         Object.const_get(el).destroy_all
         # reset the ids
