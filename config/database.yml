@@ -4,7 +4,7 @@ default: &default
   template: template_base
   username: postgres
   password: postgres
-  pool: 5
+  pool: 15
 
 development:
   <<: *default
