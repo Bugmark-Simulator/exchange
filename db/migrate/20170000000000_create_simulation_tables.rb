@@ -26,7 +26,7 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.datetime :comment_delete
       t.jsonb    :jfields,  null: false, default: {}
     end
-    add_index :issue_comments, :issue_uuid
+    add_index   :issue_comments, :issue_uuid
 
     create_table  :log do |t|
       t.string    :user_uuid
@@ -41,6 +41,14 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
       t.datetime  :systime
       t.jsonb     :jfields,  null: false, default: {}
     end
+
+    create_table :issue_new_comments do |t|
+      t.string   :issue_uuid
+      t.string   :user_uuid
+      t.integer  :new_comments
+      t.jsonb    :jfields,  null: false, default: {}
+    end
+    add_index(:issue_new_comments, [:issue_uuid, :user_uuid], unique: true)
 
   end
 end
