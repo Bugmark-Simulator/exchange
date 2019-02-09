@@ -50,5 +50,15 @@ class CreateSimulationTables < ActiveRecord::Migration[5.1]
     end
     add_index(:issue_new_comments, [:issue_uuid, :user_uuid], unique: true)
 
+    create_table  :sessions do |t|
+      t.string    :uuid
+      t.datetime  :bugmtime_start
+      t.datetime  :bugmtime_end
+      t.datetime  :systime_start
+      t.datetime  :systime_end
+      t.integer   :days_simulated
+      t.jsonb     :jfields,  null: false, default: {}
+    end
+
   end
 end

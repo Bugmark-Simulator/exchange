@@ -19,7 +19,7 @@ class BugmHost
     private
 
     def reset_postgres
-      tables = %w(Tracker User Offer Escrow Position Amendment Contract Event Work_queue Issue_Comment Bugmtime)
+      tables = %w(Tracker User Offer Escrow Position Amendment Contract Event Work_queue Issue_Comment Bugmtime Session)
       tables.each {|el|
         Object.const_get(el).destroy_all
         # reset the ids
@@ -27,7 +27,7 @@ class BugmHost
         ActiveRecord::Base.connection.execute(sql)
       }
       BugmTime.clear_offset
-      UserCmd::Create.new({email: 'admin@bugmark.net', password: 'bugmark'}).project
+      UserCmd::Create.new({email: 'admin@bugmark.net', password: 'bugmark', name: 'Admin'}).project
     end
 
     def reset_grafana
