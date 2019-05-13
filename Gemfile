@@ -47,7 +47,7 @@ gem 'bootstrap'                   # twitter bootstrap
 gem 'will_paginate'               # pagination
 gem 'pg_search'                   # full-text search
 
-gem 'iora', github: 'bugmark/iora'
+gem 'iora', github: 'Bugmark-Simulator/iora'
 
 gem 'grape'
 gem 'grape_logging'
